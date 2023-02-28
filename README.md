@@ -1,5 +1,3 @@
-![](./images/AILA-no-pje.png)
-
 Trata Texto em Lote
 -------------------
 
@@ -10,19 +8,19 @@ A Arquitetura
 
 A função principal do Trata Texto em Lote, chamada de TrataTexto(), consiste na aplicação de forma sequencial das seguintes funções: TrataFormatacao(), TrataAbreviatura(), TrataSigla(), TrataCaractereEspecial(), TrataTermo(), TrataLegislacao() e TrataJurisprudencia(). A seguir descrevemos cada uma dessas funções.
 
-![](images/trata texto lote/arquitetura1.png)
+![](./images/trata texto lote/arquitetura1.png)
 
 ### Trata Formatação
 
 A função TrataFormatacao() tem o objetivo de corrigir características relacionadas a formatação dos textos dos documentos. Em nossas análises, identificamos alguns padrões que precisavam de correção. Inicialmente, padronizamos os caracteres de quebra de linha (newline) através da PadronizaLinhaNova(). Percebemos também poderiam existir espaços duplicados antes e depois das palavras, para isso criamos a função TiraEspaco(). Após removermos estes espaços, vimos que haviam espaços duplicados, daí fizemos uma outra função chamada TiraEspacoDuplicado(). Em seguida, vimos muitas linhas totalmente repetidas (e.g., cabeçalhos e rodapés). Quebramos o texto por linha e fizemos a remoção das duplicadas com a função TiraLinhaRepetida(). Finalmente, juntamos novamente todas as linhas com a função JuntaLinha().
 
-![](images/trata texto lote/arquitetura2.png)
+![](./images/trata texto lote/arquitetura2.png)
 
 ### Trata Abreviatura
 
 A função TrataAbreviatura() substitui algumas abreviaturas pela respectiva palavra por extenso. Por exemplo, variações da abreviatura “Art.” (Art, art, ART, etc) foram substituidas pela palavra “Artigo”.
 
-![](images/trata texto lote/arquitetura3.png)
+![](./images/trata texto lote/arquitetura3.png)
 
 ### Trata Sigla
 
